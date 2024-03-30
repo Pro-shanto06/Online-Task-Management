@@ -37,28 +37,32 @@ TaskNest is an Online Task Management System designed to help users effectively 
 
 
 2. **Install Server Dependencies**:
+```bash
 cd server
+
+
+```bash
 npm install
 
 
 
-3. **Create Environment Variables File**:
+4. **Create Environment Variables File**:
 Create a `.env` file in the server directory and add the following environment variables:
 MONGO_URI=<your_mongodb_uri>
 JWT_SECRET=<your_jwt_secret>
 
 
 
-4. **Start the Server**:
+5. **Start the Server**:
 npm start
 
 
 
-5. **Install Client Dependencies**:
+6. **Install Client Dependencies**:
 cd ../client
 npm install
 
 
 
-6. **Start the Client**:
+7. **Start the Client**:
 npm run dev
