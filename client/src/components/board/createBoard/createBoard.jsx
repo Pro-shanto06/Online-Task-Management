@@ -14,7 +14,7 @@ const CreateBoard = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(createBoard({ title }));
-    setTitle(''); // Reset the title state to clear the input box
+    setTitle(''); 
   };
 
   return (

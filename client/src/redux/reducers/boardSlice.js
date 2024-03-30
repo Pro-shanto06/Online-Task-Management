@@ -45,7 +45,6 @@ export const boardSlice = createSlice({
 
 export const { setBoards, addBoard, updateBoard, deleteBoard, setError, setSuccess, setBoardDetails, clearBoardDetails } = boardSlice.actions;
 
-// Thunks
 export const fetchBoards = () => async (dispatch) => {
   try {
     const token = localStorage.getItem('token');

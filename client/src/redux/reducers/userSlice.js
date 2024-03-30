@@ -39,22 +39,16 @@ export const loginUser = (formData, navigate) => async (dispatch) => {
   try {
     const response = await axios.post('http://localhost:5000/api/auth/login', formData);
     const { user, token, msg } = response.data;
-
-    // Store user and token in Redux state
+ 
     dispatch(setUser({ user, token, msg }));
-
-    // Store user and token in localStorage
     localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('token', token);
 
-    // Navigate to the desired page
     navigate('/board');
   } catch (error) {
     dispatch(setError(error.response ? error.response.data.msg : 'Login failed. Please try again later.'));
   }
 };
-
-
 
 
 export const signupUser = (formData, navigate) => async (dispatch) => {
@@ -74,7 +68,6 @@ export const signupUser = (formData, navigate) => async (dispatch) => {
 export const performLogout = () => async (dispatch) => {
   try {
     await axios.post('http://localhost:5000/api/auth/logout');
-    // Clear user data from Redux state and localStorage upon logout
     dispatch(logoutUser());
     localStorage.removeItem('token');
   } catch (error) {

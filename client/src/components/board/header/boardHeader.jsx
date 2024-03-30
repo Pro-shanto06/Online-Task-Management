@@ -10,17 +10,12 @@ const Header = () => {
     const navigate = useNavigate();
 
     const handleLogout = async () => {
-        // Dispatch the performLogout action
         await dispatch(performLogout());
-        // Show success message in alert
-
-        // Navigate to the home page
         navigate('/');
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Implement search functionality
     };
 
     return (

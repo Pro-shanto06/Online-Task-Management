@@ -17,7 +17,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/board" element={<ProtectedRoute element={<Board />} />} />
-          <Route path="/board/:id" element={<ProtectedRoute element={<BoardDetailsPage />} />} /> {/* Route for board details page */}
+          <Route path="/board/:id" element={<ProtectedRoute element={<BoardDetailsPage />} />} />
         </Routes>
       </BrowserRouter>
     </Provider>

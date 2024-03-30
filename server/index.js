@@ -18,7 +18,6 @@ connectDB()
   .then(() => {
     app.use(express.json());
 
-    // Routes
     app.use('/api/auth', authRoutes);
     app.use('/api/boards', boardRoutes);
     app.use('/api', listRoutes);

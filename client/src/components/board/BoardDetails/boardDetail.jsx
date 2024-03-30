@@ -4,22 +4,19 @@ import { useParams } from 'react-router-dom';
 import { fetchBoardDetails, clearBoardDetails } from '../../../redux/reducers/boardSlice';
 import Header from '../../../components/board/header/boardHeader';
 import { createList, fetchLists, deleteList } from '../../../redux/reducers/listSlice';
-import List from '../../list/list'; // Import the List component
+import List from '../../list/list'; 
 import './boardDetail.css';
 
 const BoardDetails = () => {
-  const { id } = useParams(); // Access the board ID from the route parameters
+  const { id } = useParams();
   const dispatch = useDispatch();
   const boardDetails = useSelector((state) => state.board.boardDetails);
   const lists = useSelector((state) => state.list.lists);
   const [newListTitle, setNewListTitle] = useState('');
 
   useEffect(() => {
-    // Fetch board details and lists when the component mounts
     dispatch(fetchBoardDetails(id));
     dispatch(fetchLists(id));
-
-    // Clear board details when the component unmounts
     return () => {
       dispatch(clearBoardDetails());
     };
@@ -27,7 +24,7 @@ const BoardDetails = () => {
 
   const handleCreateList = () => {
     dispatch(createList({ boardId: id, title: newListTitle }));
-    setNewListTitle(''); // Clear input field after creating list
+    setNewListTitle(''); 
   };
 
   return (

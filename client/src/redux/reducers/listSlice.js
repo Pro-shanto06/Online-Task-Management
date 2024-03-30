@@ -10,16 +10,16 @@ export const listSlice = createSlice({
   reducers: {
     setLists: (state, action) => {
       state.lists = action.payload;
-      state.error = null; // Reset error when lists are successfully set
+      state.error = null; 
     },
     addList: (state, action) => {
       state.lists.push(action.payload);
-      state.error = null; // Reset error when list is successfully added
+      state.error = null; 
     },
     removeListFromState: (state, action) => {
       const listId = action.payload;
       state.lists = state.lists.filter(list => list._id !== listId);
-      state.error = null; // Reset error when list is successfully removed
+      state.error = null;
     },
     setError: (state, action) => {
       state.error = action.payload;

@@ -20,7 +20,6 @@ const Signup = () => {
   const successMessage = useSelector(state => state.user.success);
 
   useEffect(() => {
-    // Reset success message when component unmounts
     return () => {
       dispatch(setSuccess(null));
     };

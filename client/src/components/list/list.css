@@ -1,33 +1,30 @@
-/* list.css */
 
-/* Container for the entire list */
 .list-container {
   background-color: #f4f4f4;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
   margin-bottom: 20px;
-  width: calc(33.33% - 20px); /* Width of each column (minus margins) */
-  margin-right: 20px; /* Spacing between columns */
-  float: left; /* Float the container to create the layout */
-  box-sizing: border-box; /* Include padding and border in the width */
+  width: calc(33.33% - 20px); 
+  margin-right: 20px; 
+  float: left; 
+  box-sizing: border-box;
 }
 
-/* Header of the list */
 .list-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Title of the list */
+
 .list-header h3 {
   margin: 0;
   font-size: 18px;
   color: #333;
 }
 
-/* Delete button */
+
 .list-header button {
   background-color: #f44336;
   color: white;
@@ -41,18 +38,18 @@
   background-color: #d32f2f;
 }
 
-/* Tasks section */
+
 .tasks {
   margin-top: 16px;
 }
 
-/* List of tasks */
+
 .tasks ul {
   padding: 0;
   margin: 0;
 }
 
-/* Individual task card */
+
 .task-card {
   background-color: white;
   border-radius: 4px;
@@ -61,34 +58,34 @@
   margin-bottom: 8px;
 }
 
-/* Title of the task card */
+
 .task-card h4 {
   margin: 0;
   font-size: 16px;
   color: #333;
 }
 
-/* Description of the task card */
+
 .task-card p {
   margin: 8px 0 0;
   font-size: 14px;
   color: #666;
 }
 
-/* Add task section */
+
 .add-task {
   margin-top: 16px;
 }
 
-/* Input field for task title */
+
 .add-task input[type="text"] {
-  width: calc(100% - 80px); /* Adjust as needed */
+  width: calc(100% - 80px);
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-/* Button to add a new task */
+
 .add-task button {
   background-color: #4caf50;
   color: white;
@@ -103,7 +100,7 @@
   background-color: #388e3c;
 }
 
-/* Error message */
+
 .error {
   color: #f44336;
   margin-top: 8px;

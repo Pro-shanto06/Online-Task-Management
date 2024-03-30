@@ -10,15 +10,11 @@ export const taskSlice = createSlice({
   reducers: {
     setTasks: (state, action) => {
       state.tasks = action.payload;
-      state.error = null; // Reset error when tasks are successfully set
+      state.error = null; 
     },
     addTask: (state, action) => {
-      const { listId, task } = action.payload;
-      const listIndex = state.tasks.findIndex(list => list._id === listId);
-      if (listIndex !== -1) {
-        state.tasks[listIndex].tasks.push(task);
-        state.error = null; // Reset error when task is successfully added
-      }
+      state.tasks.push(action.payload); 
+      state.error = null; 
     },
     updateTask: (state, action) => {
       const updatedTask = action.payload;
@@ -30,14 +26,14 @@ export const taskSlice = createSlice({
           )
         };
       });
-      state.error = null; // Reset error when task is successfully updated
+      state.error = null;
     },
     removeTaskFromState: (state, action) => {
       const taskId = action.payload;
       state.tasks.forEach(list => {
         list.tasks = list.tasks.filter(task => task._id !== taskId);
       });
-      state.error = null; // Reset error when task is successfully removed
+      state.error = null;
     },
     setError: (state, action) => {
       state.error = action.payload;
@@ -46,8 +42,6 @@ export const taskSlice = createSlice({
 });
 
 export const { setTasks, addTask, updateTask, removeTaskFromState, setError } = taskSlice.actions;
-
-// Function to get the authorization token from localStorage
 const getToken = () => localStorage.getItem('token');
 
 export const fetchTasks = (listId) => async (dispatch) => {
@@ -86,11 +80,13 @@ export const createTask = (taskData) => async (dispatch) => {
       }
     );
 
-    dispatch(addTask({ listId: taskData.listId, task: response.data }));
+    dispatch(addTask(response.data));
+
   } catch (error) {
     dispatch(setError(error.response ? error.response.data.message : 'Error creating task'));
   }
 };
+
 
 export const updateTaskOnServer = (updatedTask) => async (dispatch) => {
   try {
@@ -99,7 +95,7 @@ export const updateTaskOnServer = (updatedTask) => async (dispatch) => {
       throw new Error('No authorization token found');
     }
 
-    dispatch(updateTask(updatedTask)); // Update the local state immediately
+    dispatch(updateTask(updatedTask)); 
 
     await axios.put(
       `http://localhost:5000/api/tasks/${updatedTask._id}`,

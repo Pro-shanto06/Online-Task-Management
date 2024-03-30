@@ -1,21 +1,20 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate } from 'react-router-dom';
 import { deleteBoardRequest } from '../../../redux/reducers/boardSlice';
 import './boardItem.css'; 
 
-const BoardItem = ({ board }) => { // Remove onClick prop
+const BoardItem = ({ board }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate(); 
 
   const handleDeleteClick = (event) => {
-    event.stopPropagation(); // Stop event propagation to prevent navigating to board details page
+    event.stopPropagation(); 
     dispatch(deleteBoardRequest(board._id));
   };
 
   const handleCardClick = () => {
-    // Navigate to the BoardDetails page with the board ID in the route
-    navigate(`/board/${board._id}`); // Use navigate function
+    navigate(`/board/${board._id}`);
   };
 
   return (
