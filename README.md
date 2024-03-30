@@ -57,7 +57,7 @@ JWT_SECRET=<your_jwt_secret>
 
 5. **Start the Server**:
 ```bash
-npm start
+nodemon start
 ```
 
 
