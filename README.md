@@ -30,41 +30,39 @@ TaskNest is an Online Task Management System that allows users to manage their t
   
 - **Additional Libraries and Tools**: WebSocket for real-time updates, nodemon for server auto-restart, dotenv for environment variables.
 
-## Setup Process
+# TaskNest Setup Process
 
-1. Clone the repository:
+## Step 1: Clone the Repository
 
 git clone <repository_url>
 
-
-2. Navigate to the server directory and install dependencies:
+## Step 2: Install Server Dependencies
 
 cd server
 npm install
 
+## Step 3: Create Environment Variables File
 
-3. Create a `.env` file in the server directory and paste the following environment variables:
+echo "MONGO_URI=<your_mongodb_uri>" >> .env
+echo "JWT_SECRET=<your_jwt_secret>" >> .env
 
-MONGO_URI=<your_mongodb_uri>
-JWT_SECRET=<your_jwt_secret>
-
-
-4. Start the server:
+## Step 4: Start the Server
 
 npm start
-or
-nodemon start
 
-
-5. Navigate to the client directory and install dependencies:
+## Step 5: Install Client Dependencies
 
 cd ../client
 npm install
 
-
-6. Start the client:
+## Step 6: Start the Client
 
 npm run dev
 
+# Once completed, you can access TaskNest in your web browser at the specified URL.
 
-Feel free to reach out to us for any assistance or queries.
+# For any assistance or queries, feel free to reach out to us.
+
+# ---
+# *This setup process is provided by [Your Name].*
+
