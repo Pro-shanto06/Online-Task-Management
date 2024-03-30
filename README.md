@@ -29,9 +29,9 @@ TaskNest is an Online Task Management System designed to help users effectively 
 ## Setup Process
 
 1. **Clone the Repository**: 
-   ```bash
-   git clone <repository_url>
-   ```
+ ```bash
+ git clone <repository_url>
+ ```
 
 
 
