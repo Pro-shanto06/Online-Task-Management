@@ -1,0 +1,41 @@
+.board-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 300px; /* Set width to desired fixed size */
+  height: 300px; /* Set height to match width */
+  overflow: hidden; /* Hide any content that exceeds the fixed size */
+}
+
+.board-item:hover {
+  transform: translateY(-5px);
+}
+
+.board-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.board-item-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333333;
+}
+
+.delete-button {
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}

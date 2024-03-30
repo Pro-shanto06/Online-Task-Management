@@ -1,0 +1,94 @@
+/* App.css */
+
+body {
+    background: linear-gradient(rgb(234, 230, 255), rgb(255, 255, 255)) no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+  
+  
+
+.main-content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.hero {
+    margin-top: 4rem;
+}
+
+.hero h1 {
+    font-size: 2.1rem;
+    margin-bottom: 1.25rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.875rem;
+}
+
+.signup-now {
+    padding: 0.75rem 1.875rem;
+    font-size: 1rem;
+    background: #6b4a94;
+    color: white;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.signup-now:hover {
+  background-color: #52397f; 
+}
+
+.work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work img {
+    width: 400px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1000px) {
+   
+    .login-button,
+    .signup-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        margin: 0rem auto;
+    }
+    
+    .hero {
+        margin-top: 1rem;
+        order: 2;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+  
+    .work img {
+        order: 1;
+    }
+}

@@ -1,0 +1,27 @@
+
+
+.board-list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.board-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.board-card:hover {
+  transform: translateY(-5px);
+}
+
+.board-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333333;
+}

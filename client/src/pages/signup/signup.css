@@ -1,0 +1,117 @@
+.signup-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.signup-container {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.signup-image {
+  flex: 1;
+  background-image: url('signupbg.png');
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  text-align: center; 
+}
+
+.signup-image img {
+  width: 500px
+}
+
+.signup-image p {  
+  color: white;
+  font-size: 1rem; 
+}
+
+.signup-form {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form input {
+  border: none;
+  border-bottom: 1.5px solid #000000;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent; 
+  margin-bottom: 1.5rem; 
+  margin-top: 1.5rem; 
+}
+
+.signup-form input::placeholder {
+  color: #999;
+}
+
+.signup-form button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: linear-gradient(to bottom right, #8233A8, #ED46BE);
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #0056b3;
+}
+
+.signup-form .login-link {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Error and success messages */
+.error-message,
+.success-message {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.error-message {
+  background-color: #dc3545;
+  color: white;
+}
+
+.success-message {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .signup-image {
+    display: none;
+  }
+
+  .signup-form {
+    padding: 2rem 1rem;
+  }
+
+  .signup-form input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,103 @@
+/* login.css */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.login-container {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.login-image {
+  flex: 1;
+  background-image: url('signupbg.png');
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.login-image img {
+  margin-top: 2rem;
+}
+
+.login-image p {
+  margin-top: 3rem;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.login-form {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h2 {
+  margin-bottom: 1rem;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  border: none;
+  border-bottom: 1.5px solid #000000;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.login-form input::placeholder {
+  color: #999;
+}
+
+.login-form button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: linear-gradient(to bottom right, #8233a8, #ed46be);
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.login-form .login-link {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Error message */
+.error-message {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+/* Success message */
+.success-message {
+  color: #008000;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: white;
+}
