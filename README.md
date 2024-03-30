@@ -33,16 +33,20 @@ TaskNest is an Online Task Management System designed to help users effectively 
 1. **Clone the Repository**: 
    ```bash
    git clone <repository_url>
+   ```
 
 
 
 2. **Install Server Dependencies**:
+
 ```bash
 cd server
+```
 
 
 ```bash
 npm install
+```
 
 
 
@@ -54,15 +58,23 @@ JWT_SECRET=<your_jwt_secret>
 
 
 5. **Start the Server**:
+```bash
 npm start
+```
 
 
 
 6. **Install Client Dependencies**:
+```bash
 cd ../client
+```
+```bash
 npm install
+```
 
 
 
 7. **Start the Client**:
+```bash
 npm run dev
+```
