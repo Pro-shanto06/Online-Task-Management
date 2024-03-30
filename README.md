@@ -23,10 +23,8 @@ TaskNest is an Online Task Management System designed to help users effectively 
 - **Database**: MongoDB
   
 - **Authentication**: JWT (JSON Web Tokens)
-  
-- **Styling**: CSS or a CSS framework like Tailwind, Bootstrap
-  
-- **Additional Libraries and Tools**: WebSocket for real-time updates, nodemon for server auto-restart, dotenv for environment variables.
+
+
 
 ## Setup Process
 
